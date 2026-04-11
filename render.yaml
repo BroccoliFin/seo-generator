@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: seo-generator-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: MOCK_MODE
+        value: true
