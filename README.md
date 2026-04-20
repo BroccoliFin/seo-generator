@@ -65,6 +65,7 @@ curl -X POST http://localhost:3000/api/seo/generate-seo \
 ```
 ### 🔄 Flowise Integration
 This project uses a **Flowise chatflow** to orchestrate the LLM pipeline:
+![SEO Generator](https://github.com/user-attachments/assets/69132c7e-4224-4186-b973-5b5bd7b02279) 
 ## 🔧 Environment Variables
 
 Copy `.env.example` to `.env` and configure:
