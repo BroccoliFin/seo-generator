@@ -10,9 +10,7 @@
   <strong>NestJS + Flowise endpoint for generating SEO metadata with LLM streaming</strong>
 </p>
 
-<p align="center">
-  Test task for <strong>AI Developer / LLM Engineer</strong> position (MarPla)
-</p>
+
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)]()
 [![NestJS](https://img.shields.io/badge/NestJS-10-red.svg)]()
