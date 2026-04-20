@@ -1,3 +1,4 @@
+![Uploading Снимок экрана 2026-04-20 в 19.39.59.png…]()
 
 ![SEO Generator](https://github.com/user-attachments/assets/69132c7e-4224-4186-b973-5b5bd7b02279) 
 
