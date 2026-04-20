@@ -1,4 +1,5 @@
-![SEO Generator](https://github.com/user-attachments/assets/c0c13d91-9148-447b-b3ce-4acd4e87c048) 
+
+![SEO Generator]("https://github.com/user-attachments/assets/69132c7e-4224-4186-b973-5b5bd7b02279") 
 
 
 
