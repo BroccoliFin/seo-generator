@@ -63,6 +63,18 @@ curl -X POST http://localhost:3000/api/seo/generate-seo \
   -H "Content-Type: application/json" \
   -d '{"product_name":"Test","category":"Test","keywords":"test"}'
 ```
+### 🔄 Flowise Integration
+This project uses a **Flowise chatflow** to orchestrate the LLM pipeline:
+┌─────────────────┐   ┌─────────────────┐   ┌───────────────────┐
+│ Prompt Template │──▶│ LLM Chain       │──▶│ Structured Output │
+│ {variables}     │   │ (orchestrator)  │   │  Parser (JSON)    │
+└─────────────────┘   └────────▲────────┘   └──────────────────┘
+                               │
+                  ┌────────────┴────────────┐
+                  │    OpenRouter (Qwen)    │
+                  │     Temperature: 0      │
+                  │     Streaming: true     │
+                  └─────────────────────────┘
 ## 🐳 Docker
 Build and run
 ```
