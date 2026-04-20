@@ -65,16 +65,27 @@ curl -X POST http://localhost:3000/api/seo/generate-seo \
 ```
 ### 🔄 Flowise Integration
 This project uses a **Flowise chatflow** to orchestrate the LLM pipeline:
-┌─────────────────┐   ┌─────────────────┐   ┌───────────────────┐
-│ Prompt Template │──▶│ LLM Chain       │──▶│ Structured Output │
-│ {variables}     │   │ (orchestrator)  │   │  Parser (JSON)    │
-└─────────────────┘   └────────▲────────┘   └──────────────────┘
-                               │
-                  ┌────────────┴────────────┐
-                  │    OpenRouter (Qwen)    │
-                  │     Temperature: 0      │
-                  │     Streaming: true     │
-                  └─────────────────────────┘
+## 🔧 Environment Variables
+
+Copy `.env.example` to `.env` and configure:
+
+```bash
+# App Settings
+NODE_ENV=development
+PORT=3000
+CORS_ORIGIN=*
+
+# Mock Mode (for demo without API costs)
+# Set to "true" to use mock responses, "false" for real LLM calls
+MOCK_MODE=true
+
+# Flowise Configuration (required when MOCK_MODE=false)
+FLOWISE_API_URL=https://your-flowise-instance/api/v1/prediction/your-chatflow-id
+FLOWISE_API_KEY=your-flowise-api-key
+
+# LLM Settings
+LLM_TIMEOUT_MS=20000  # Timeout for LLM requests in milliseconds
+```
 ## 🐳 Docker
 Build and run
 ```
