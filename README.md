@@ -103,6 +103,12 @@ FLOWISE_API_KEY=your-flowise-api-key
 # LLM Settings
 LLM_TIMEOUT_MS=20000  # Timeout for LLM requests in milliseconds
 ```
+🔐 Security Notes:
+✅ .env is gitignored — never commit real API keys
+✅ .env.example contains only variable names (safe to commit)
+✅ Use GitHub Secrets or Render Environment Variables for production
+✅ Flowise API keys have minimal permissions (chatflows:view only)
+
 ## 🐳 Docker
 Build and run
 ```
