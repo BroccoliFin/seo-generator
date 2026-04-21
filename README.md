@@ -110,6 +110,7 @@ LLM_TIMEOUT_MS=20000  # Timeout for LLM requests in milliseconds
 - ✅ Flowise API keys have minimal permissions (chatflows:view only)
 
 **Response (SSE Stream):**
+```bash
  {"chunk":"..."}  // Streaming chunks (optional)
 
  {
@@ -123,7 +124,7 @@ LLM_TIMEOUT_MS=20000  # Timeout for LLM requests in milliseconds
   },
   "requestId": "string"
 }
-
+```
 ## 🐳 Docker
 Build and run
 ```
