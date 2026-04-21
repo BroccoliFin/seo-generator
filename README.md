@@ -109,21 +109,15 @@ LLM_TIMEOUT_MS=20000  # Timeout for LLM requests in milliseconds
 - ✅ Use GitHub Secrets or Render Environment Variables for production
 - ✅ Flowise API keys have minimal permissions (chatflows:view only)
 
-**Response (SSE Stream):**
+Example Request
 ```bash
- {"chunk":"..."}  // Streaming chunks (optional)
-
- {
-  "done": true,
-  "result": {
-    "title": "string",
-    "meta_description": "string",
-    "h1": "string",
-    "description": "string",
-    "bullets": "string"
-  },
-  "requestId": "string"
-}
+ curl -X POST https://seo-generator-api.onrender.com/api/seo/generate-seo \
+  -H "Content-Type: application/json" \
+  -d '{
+    "product_name": "Wireless Headphones Pro",
+    "category": "Electronics",
+    "keywords": "bluetooth, noise-cancelling"
+  }'
 ```
 ## 🐳 Docker
 Build and run
