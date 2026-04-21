@@ -109,6 +109,21 @@ LLM_TIMEOUT_MS=20000  # Timeout for LLM requests in milliseconds
 - ✅ Use GitHub Secrets or Render Environment Variables for production
 - ✅ Flowise API keys have minimal permissions (chatflows:view only)
 
+**Response (SSE Stream):**
+ {"chunk":"..."}  // Streaming chunks (optional)
+
+ {
+  "done": true,
+  "result": {
+    "title": "string",
+    "meta_description": "string",
+    "h1": "string",
+    "description": "string",
+    "bullets": "string"
+  },
+  "requestId": "string"
+}
+
 ## 🐳 Docker
 Build and run
 ```
