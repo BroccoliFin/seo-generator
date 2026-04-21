@@ -68,6 +68,20 @@ curl -X POST http://localhost:3000/api/seo/generate-seo \
 ### 🔄 Flowise Integration
 This project uses a **Flowise chatflow** to orchestrate the LLM pipeline:
 ![Flowise sheme](https://github.com/user-attachments/assets/403c3ab5-5a6d-49cf-983f-df78770a456f)
+
+### Chatflow Components:
+- **Prompt Template**: Variables `{product_name}`, `{category}`, `{keywords}` with strict JSON schema instruction
+- **OpenRouter Chat Model**: `qwen/qwen-2.5-72b-instruct` via OpenAI-compatible API
+- **Structured Output Parser**: Enforces 5-field JSON schema (`title`, `meta_description`, `h1`, `description`, `bullets`)
+- **LLM Chain**: Orchestrates prompt + model + parser with error handling
+
+### Import the Chatflow:
+1. Download [`seo-g Chatflow.json`](./flowise/seo-g-chatflow.json)
+2. In Flowise UI: **Chatflows** → **Import** → Upload the JSON file
+3. Configure OpenRouter credentials in the node settings
+4. Save and get your **Chatflow ID** for the API endpoint
+
+> 💡 The chatflow is exported and included in this repo for easy replication.
 ## 🔧 Environment Variables
 
 Copy `.env.example` to `.env` and configure:
