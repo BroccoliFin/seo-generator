@@ -21,7 +21,6 @@
 [![Deployed on Render](https://img.shields.io/badge/Deployed-on%20Render-44cc11.svg)](https://seo-generator-api.onrender.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]()
 
-**[Русская версия → README.ru.md](./README.ru.md)**
 
 ## ✨ Features
 
